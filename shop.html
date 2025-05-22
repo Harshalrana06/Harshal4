@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StyleSphere - Trendy Tees</title>
+    <title>styleSphere - Trendy Tees</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -12,20 +12,24 @@
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #000; /* Dark background from portfolio */
-            color: #fff; /* Light text from portfolio */
+            background-color: #0f0f0f;
+            color: #f1f5f9;
             overflow-x: hidden;
             transition: background-color 0.5s ease, color 0.5s ease;
         }
+        header {
+            background-color: #0a0a0a;
+            color: #f1f5f9;
+        }
         .product-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background-color: #000; /* Match body background */
-            color: #fff; /* Light text for product card */
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05); /* Subtle white shadow */
+            background-color: #2f3135;
+            color: #f1f5f9;
         }
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1); /* Lighter shadow on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            background-color: #4a5568;
         }
         .cart-sidebar {
             position: fixed;
@@ -34,14 +38,14 @@
             width: 100%;
             max-width: 380px;
             height: 100%;
-            background-color: #1a1a1a; /* Dark cart sidebar background */
+            background-color: #3a424e;
             box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
             transform: translateX(100%);
             transition: transform 0.3s ease-in-out;
             z-index: 1000;
             display: flex;
             flex-direction: column;
-            color: #fff; /* Light text for cart sidebar */
+            color: #f1f5f9;
         }
         .cart-sidebar.open {
             transform: translateX(0);
@@ -73,7 +77,7 @@
         .hamburger-menu span {
             display: block;
             height: 2px;
-            background-color: #fff; /* White for visibility on dark header */
+            background-color: #f1f5f9;
             transition: all 0.3s ease-in-out;
         }
         .hamburger-menu.open span:nth-child(1) {
@@ -87,10 +91,10 @@
         }
         .mobile-nav {
             position: fixed;
-            top: 64px; /* Height of header */
+            top: 64px;
             left: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.95); /* Darker mobile nav background */
+            background-color: rgba(45, 55, 72, 0.95);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transform: translateY(-100%);
             transition: transform 0.3s ease-in-out;
@@ -119,22 +123,125 @@
             visibility: visible;
         }
         .product-modal-content {
-            background-color: #000; /* Match body background */
+            background-color: #2d3748;
             padding: 2rem;
             border-radius: 0.75rem;
             max-width: 700px;
             width: 90%;
-            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
             position: relative;
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
-            color: #fff; /* Light text for modal */
+            color: #f1f5f9;
         }
         @media (min-width: 768px) {
             .product-modal-content {
                 flex-direction: row;
             }
+        }
+
+        /* Hero Section Specifics */
+        .hero-section {
+            background-color: #1a202c;
+            color: #f1f5f9;
+        }
+        .hero-section h1 {
+            color: #a3e635; /* Lime-400 */
+        }
+        .hero-section .bg-lime-500 {
+            background-color: #84cc16; /* Lime-500 */
+            color: white;
+        }
+        .hero-section .hover\:bg-lime-600:hover {
+            background-color: #65a30d; /* Lime-600 */
+        }
+
+        /* Product section specifics */
+        .text-lime-400 {
+            color: #a3e635; /* Lime-400 */
+        }
+        .product-card .text-lime-500 {
+            color: #84cc16; /* Lime-500 */
+        }
+        .add-to-cart-btn {
+            background-color: #84cc16; /* Lime-500 */
+            color: white;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #65a30d; /* Lime-600 */
+        }
+
+        /* Cart sidebar specifics */
+        .cart-sidebar .border-gray-700 {
+            border-color: #4a5568;
+        }
+        .cart-sidebar .text-gray-300 {
+            color: #cbd5e1;
+        }
+        .cart-sidebar .text-gray-800 {
+            color: #f1f5f9;
+        }
+        .cart-sidebar .text-gray-400 {
+            color: #94a3b8;
+        }
+        .cart-sidebar .text-gray-600 {
+            color: #94a3b8;
+        }
+        .cart-sidebar .text-lime-400 {
+            color: #a3e635; /* Lime-400 */
+        }
+        .cart-items .bg-gray-50 {
+            background-color: #4a5568;
+        }
+        .remove-from-cart-btn {
+            background-color: #ef4444;
+        }
+        .checkout-button {
+            background-color: #84cc16; /* Lime-500 */
+            color: white;
+        }
+        .checkout-button:hover {
+            background-color: #65a30d; /* Lime-600 */
+        }
+
+        /* Product modal specifics */
+        .product-modal-content .text-gray-300 {
+            color: #cbd5e1;
+        }
+        .product-modal-content .text-lime-400 {
+            color: #a3e635; /* Lime-400 */
+        }
+        .product-modal-content .border-gray-700 {
+            border-color: #4a5568;
+        }
+        .product-modal-content .focus\:ring-lime-500:focus {
+            --tw-ring-color: #84cc16; /* Lime-500 */
+        }
+        .product-modal-content .focus\:border-lime-500:focus {
+            border-color: #84cc16; /* Lime-500 */
+        }
+        .product-modal-content .bg-gray-800 {
+            background-color: #4a5568;
+        }
+        .product-modal-content .bg-lime-500 {
+            background-color: #84cc16; /* Lime-500 */
+            color: white;
+        }
+        .product-modal-content .hover\:bg-lime-600:hover {
+            background-color: #65a30d; /* Lime-600 */
+        }
+
+        /* Footer specifics */
+        footer {
+            background-color: #2d3748;
+            color: #94a3b8;
+        }
+        footer .text-lime-400 {
+            color: #a3e635; /* Lime-400 */
+        }
+        footer a.hover\:text-lime-400:hover {
+            color: #a3e635; /* Lime-400 */
         }
 
         /* Light Mode Styles */
@@ -143,146 +250,156 @@
             color: #1a202c;
         }
         body.light-mode header {
-            background-color: #e2e8f0;
+            background-color: #84cc16; /* Lime-500 */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        body.light-mode header .text-gray-800 {
-            color: #1a202c;
+            color: #ffffff;
         }
         body.light-mode header nav a {
-            color: #4a5568;
+            color: #ffffff;
         }
         body.light-mode header nav a:hover {
-            color: #2d3748;
+            color: #d9f99d;
+            background-color: rgba(255, 255, 255, 0.2);
         }
         body.light-mode header #view-cart-btn,
         body.light-mode header #view-cart-btn-mobile {
-            color: #4a5568;
+            color: #ffffff;
         }
         body.light-mode .hamburger-menu span {
-            background-color: #1a202c;
+            background-color: #ffffff;
         }
         body.light-mode .mobile-nav {
-            background-color: #ffffff;
+            background-color: #84cc16; /* Lime-500 */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         body.light-mode .mobile-nav nav a {
-            color: #1a202c;
-            background-color: #ffffff;
+            color: #ffffff;
+            background-color: #84cc16;
         }
         body.light-mode .mobile-nav nav a:hover {
-            background-color: #f0f0f0;
+            background-color: #65a30d;
         }
         body.light-mode .hero-section {
-            background-color: #bae6fd; /* Light blue */
+            background-color: #ffffff;
             color: #1a202c;
         }
-        body.light-mode .hero-section .bg-white {
-            background-color: #4a5568; /* Darker button for light mode */
-            color: #fff;
+        body.light-mode .hero-section h1 {
+            color: #65a30d; /* Lime-600 */
         }
-        body.light-mode .hero-section .hover\:bg-gray-100:hover {
-            background-color: #2d3748;
+        body.light-mode .hero-section .bg-lime-500 {
+            background-color: #84cc16; /* Lime-500 */
+            color: white;
         }
-        body.light-mode .text-gray-800 {
-            color: #1a202c;
+        body.light-mode .hero-section .hover\:bg-lime-600:hover {
+            background-color: #65a30d; /* Lime-600 */
         }
         body.light-mode .product-card {
-            background-color: #ffffff; /* Keep white for light mode */
+            background-color: #ffffff;
             color: #1a202c;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
         body.light-mode .product-card:hover {
-            box-shadow: 0 6px 20px rgba(74, 85, 104, 0.2);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            background-color: #f8fafc;
         }
-        body.light-mode .product-card .text-blue-600 {
-            color: #090f1a;
+        body.light-mode .product-card .text-lime-500 {
+            color: #84cc16; /* Lime-500 */
         }
         body.light-mode .add-to-cart-btn {
-            background-color: #4a5568;
+            background-color: #84cc16; /* Lime-500 */
             color: #fff;
         }
         body.light-mode .add-to-cart-btn:hover {
-            background-color: #2d3748;
+            background-color: #65a30d; /* Lime-600 */
         }
         body.light-mode .cart-sidebar {
             background-color: #ffffff;
             box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
             color: #1a202c;
         }
-        body.light-mode .cart-sidebar .border-gray-200 {
+        body.light-mode .cart-sidebar .border-gray-700 {
             border-color: #e2e8f0;
+        }
+        body.light-mode .cart-sidebar .text-gray-300 {
+            color: #4a5568;
         }
         body.light-mode .cart-sidebar .text-gray-800 {
             color: #1a202c;
         }
+        body.light-mode .cart-sidebar .text-gray-400 {
+            color: #4a5568;
+        }
         body.light-mode .cart-sidebar .text-gray-600 {
             color: #4a5568;
         }
-        body.light-mode .cart-sidebar .text-blue-600 {
-            color: #4a5568;
+        body.light-mode .cart-sidebar .text-lime-400 {
+            color: #84cc16; /* Lime-500 */
         }
         body.light-mode .cart-items .bg-gray-50 {
-            background-color: #f0f0f0;
+            background-color: #f0f4f8;
         }
         body.light-mode .remove-from-cart-btn {
             background-color: #e53e3e;
         }
         body.light-mode .checkout-button {
-            background-color: #4a5568;
+            background-color: #84cc16; /* Lime-500 */
             color: #fff;
         }
         body.light-mode .checkout-button:hover {
-            background-color: #2d3748;
+            background-color: #65a30d; /* Lime-600 */
         }
         body.light-mode .product-modal-content {
-            background-color: #ffffff; /* Keep white for light mode */
+            background-color: #ffffff;
             color: #1a202c;
         }
-        body.light-mode .product-modal-content .text-gray-800,
-        body.light-mode .product-modal-content .text-gray-700 {
+        body.light-mode .product-modal-content .text-gray-300 {
+            color: #4a5568;
+        }
+        body.light-mode .product-modal-content .text-lime-400 {
+            color: #84cc16; /* Lime-500 */
+        }
+        body.light-mode .product-modal-content .border-gray-700 {
+            border-color: #cbd5e1;
+        }
+        body.light-mode .product-modal-content .focus\:ring-lime-500:focus {
+            --tw-ring-color: #84cc16;
+        }
+        body.light-mode .product-modal-content .focus\:border-lime-500:focus {
+            border-color: #84cc16;
+        }
+        body.light-mode .product-modal-content .bg-gray-800 {
+            background-color: #f0f4f8;
             color: #1a202c;
         }
-        body.light-mode .product-modal-content .text-blue-600 {
-            color: #406199;
-        }
-        body.light-mode .product-modal-content .border-gray-300 {
-            border-color: #e2e8f0;
-        }
-        body.light-mode .product-modal-content .focus\:ring-blue-500,
-        body.light-mode .product-modal-content .focus\:border-blue-500 {
-            border-color: #4a5568;
-            --tw-ring-color: #4a5568;
-        }
-        body.light-mode .product-modal-content .bg-blue-600 {
-            background-color: #104db6;
+        body.light-mode .product-modal-content .bg-lime-500 {
+            background-color: #84cc16; /* Lime-500 */
             color: #fff;
         }
-        body.light-mode .product-modal-content .hover\:bg-blue-700:hover {
-            background-color: #2d3748;
+        body.light-mode .product-modal-content .hover\:bg-lime-600:hover {
+            background-color: #65a30d; /* Lime-600 */
         }
         body.light-mode footer {
             background-color: #e2e8f0;
-            color: #1a202c;
-        }
-        body.light-mode footer .text-gray-400 {
             color: #4a5568;
         }
-        body.light-mode footer a.hover\:text-blue-400:hover {
-            color: #2d3748;
+        body.light-mode footer .text-lime-400 {
+            color: #84cc16; /* Lime-500 */
+        }
+        body.light-mode footer a.hover\:text-lime-400:hover {
+            color: #65a30d;
         }
         body.light-mode footer img {
-            filter: invert(100%); /* Invert social icons for light mode */
+            filter: none;
         }
     </style>
 </head>
 <body>
-    <header class="bg-black bg-opacity-70 shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50">
-        <div class="text-2xl font-bold text-lime-400">StyleSphere</div>
-        <nav class="hidden md:flex space-x-6 text-gray-300 font-medium">
-            <a href="#" class="hover:text-lime-400 transition-colors">Home</a>
-            <a href="#products" class="hover:text-lime-400 transition-colors">Products</a>
-            <button id="view-cart-btn" class="text-gray-300 hover:text-lime-400 focus:outline-none">Cart (<span id="cart-count">0</span>)</button>
+    <header class="shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-2xl font-bold text-white">StyleSphere</div>
+        <nav class="hidden md:flex space-x-6 text-white font-medium">
+            <a href="#" class="hover:text-lime-200 transition-colors">Home</a>
+            <a href="#products" class="hover:text-lime-200 transition-colors">Products</a>
+            <button id="view-cart-btn" class="text-white hover:text-lime-200 focus:outline-none">Cart (<span id="cart-count">0</span>)</button>
         </nav>
         <div class="flex items-center md:hidden">
             <button id="mobile-menu-toggle" class="focus:outline-none mr-4">
@@ -292,22 +409,24 @@
                     <span></span>
                 </div>
             </button>
-            <button id="view-cart-btn-mobile" class="text-gray-300 hover:text-lime-400 focus:outline-none">Cart (<span id="cart-count-mobile">0</span>)</button>
+            <button id="view-cart-btn-mobile" class="text-white hover:text-lime-200 focus:outline-none">Cart (<span id="cart-count-mobile">0</span>)</button>
         </div>
-        <button id="theme-toggle" class="text-lime-400 text-xl focus:outline-none ml-4">🌓</button>
+        <button id="theme-toggle" class="text-white text-xl focus:outline-none ml-4">🌓</button>
     </header>
 
     <div id="mobile-nav" class="mobile-nav hidden md:hidden">
         <nav class="flex flex-col p-4 space-y-2">
-            <a href="#" class="block py-2 text-gray-300 hover:bg-gray-900 rounded" onclick="closeMobileMenu()">Home</a>
-            <a href="#products" class="block py-2 text-gray-300 hover:bg-gray-900 rounded" onclick="closeMobileMenu()">Products</a>
+            <a href="#" class="block py-2 text-white hover:bg-gray-700 rounded" onclick="closeMobileMenu()">Home</a>
+            <a href="#products" class="block py-2 text-white hover:bg-gray-700 rounded" onclick="closeMobileMenu()">Products</a>
         </nav>
     </div>
 
-    <section class="hero-section bg-gray-900 text-white py-20 px-6 text-center">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Trendy Tees for Everyone</h1>
-        <p class="text-lg md:text-xl mb-8">Discover our latest collection of stylish and comfortable T-shirts.</p>
-        <a href="#products" class="bg-lime-400 text-black hover:bg-lime-500 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">Shop Now</a>
+    <section class="hero-section py-20 px-6 text-center">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Trendy Tees for Everyone</h1>
+            <p class="text-lg md:text-xl mb-8">Discover our latest collection of stylish and comfortable T-shirts.</p>
+            <a href="#products" class="bg-lime-500 text-white hover:bg-lime-600 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">Shop Now</a>
+        </div>
     </section>
 
     <section id="products" class="container mx-auto py-12 px-6">
@@ -327,9 +446,9 @@
         <div class="p-6 border-t border-gray-700">
             <div class="flex justify-between items-center mb-4">
                 <span class="text-xl font-semibold text-white">Total:</span>
-                <span id="cart-total" class="text-xl font-bold text-lime-400">$0.00</span>
+                <span id="cart-total" class="text-xl font-bold text-lime-400">₹0.00</span>
             </div>
-            <button class="checkout-button w-full bg-lime-400 text-black font-bold py-3 rounded-md hover:bg-lime-500 transition duration-300">
+            <button class="checkout-button w-full bg-lime-500 text-white font-bold py-3 rounded-md hover:bg-lime-600 transition duration-300">
                 Checkout (Non-functional)
             </button>
         </div>
@@ -350,7 +469,7 @@
                     <p class="text-2xl font-bold text-lime-400 mb-4" id="modal-product-price"></p>
                     <div class="mb-4">
                         <label for="modal-product-size" class="block text-gray-300 font-medium mb-2">Size:</label>
-                        <select id="modal-product-size" class="w-full p-2 border border-gray-700 rounded-md focus:ring-lime-400 focus:border-lime-400 bg-gray-800 text-white">
+                        <select id="modal-product-size" class="w-full p-2 border border-gray-700 rounded-md focus:ring-lime-500 focus:border-lime-500 bg-gray-800 text-white">
                             <option value="S">S</option>
                             <option value="M">M</option>
                             <option value="L">L</option>
@@ -358,14 +477,14 @@
                         </select>
                     </div>
                 </div>
-                <button id="modal-add-to-cart-btn" class="w-full bg-lime-400 text-black font-bold py-3 rounded-md hover:bg-lime-500 transition duration-300 mt-4">
+                <button id="modal-add-to-cart-btn" class="w-full bg-lime-500 text-white font-bold py-3 rounded-md hover:bg-lime-600 transition duration-300 mt-4">
                     Add to Cart
                 </button>
             </div>
         </div>
     </div>
 
-    <footer class="bg-black bg-opacity-70 text-gray-400 py-8 px-6 text-center">
+    <footer class="text-gray-400 py-8 px-6 text-center">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
                 <h3 class="font-bold text-lg mb-2 text-lime-400">StyleSphere</h3>
@@ -383,9 +502,9 @@
             <div>
                 <h3 class="font-bold text-lg mb-2 text-lime-400">Follow Us</h3>
                 <div class="flex justify-center space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-lime-400"><img src="https://placehold.co/24x24/black/white?text=FB" alt="Facebook" class="rounded-full"></a>
-                    <a href="#" class="text-gray-400 hover:text-lime-400"><img src="https://placehold.co/24x24/black/white?text=IG" alt="Instagram" class="rounded-full"></a>
-                    <a href="#" class="text-gray-400 hover:text-lime-400"><img src="https://placehold.co/24x24/black/white?text=TW" alt="Twitter" class="rounded-full"></a>
+                    <a href="#" class="text-gray-400 hover:text-lime-400"><img src="https://placehold.co/24x24/2d3748/a3e635?text=FB" alt="Facebook" class="rounded-full"></a>
+                    <a href="#" class="text-gray-400 hover:text-lime-400"><img src="https://placehold.co/24x24/2d3748/a3e635?text=IG" alt="Instagram" class="rounded-full"></a>
+                    <a href="#" class="text-gray-400 hover:text-lime-400"><img src="https://placehold.co/24x24/2d3748/a3e635?text=TW" alt="Twitter" class="rounded-full"></a>
                 </div>
             </div>
         </div>
@@ -397,14 +516,14 @@
     <script>
         // Dummy Product Data
         const products = [
-            { id: 1, name: "Classic White Tee", price: 19.99, image: "https://pronk.in/cdn/shop/files/PRONK00423.jpg?v=1722063628", description: "A timeless classic, perfect for any occasion. Made from 100% premium cotton for ultimate comfort." },
-            { id: 2, name: "Vintage Black Tee", price: 24.99, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwWXit2t2E3swuqSHe3rC1-lsnnl4agcEhgA&s", description: "Achieve a retro look with this soft, distressed black T-shirt. Ideal for casual wear." },
-            { id: 3, name: "Graphic Print Tee", price: 29.99, image: "https://media.boohooman.com/i/boohooman/bmm18006_black_xl?$product_image_main_mobile$&fmt=webp", description: "Express yourself with our unique graphic print T-shirt. Bold designs and vibrant colors." },
-            { id: 4, name: "Striped Summer Tee", price: 22.99, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEz0IiFloLQZjt9dDLTkiHdhIm4uzuXmSedg&s", description: "Light and airy, this striped tee is perfect for summer days. Breathable fabric." },
-            { id: 5, name: "Sporty Performance Tee", price: 34.99, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCsicX7SDmqL8F9gT_uRT7yqvMe9DDqzFEcg&s", description: "Designed for active lifestyles, this performance tee wicks away moisture to keep you dry." },
-            { id: 6, name: "Organic Cotton Tee", price: 27.99, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9cnsBGx82PfnDrMHD4E8-TtMHyjLySC24mw&s", description: "Eco-friendly and incredibly soft, made from 100% organic cotton. Sustainable fashion choice." },
-            { id: 7, name: "V-Neck Comfort Tee", price: 21.99, image: "https://m.media-amazon.com/images/I/71fpXkAEdCL._AC_UY1100_.jpg", description: "A comfortable V-neck tee that's perfect for layering or wearing on its own. Relaxed fit." },
-            { id: 8, name: "Long Sleeve Basic", price: 31.99, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ZjhLAC9Yac2K1ND0OX9uzsrF1PgHDfPcyw&s", description: "Versatile long sleeve basic tee for cooler weather. Soft and durable fabric." },
+            { id: 1, name: "Classic White Tee", price: 999, image: "https://pronk.in/cdn/shop/files/PRONK00423.jpg?v=1722063628", description: "A timeless classic, perfect for any occasion. Made from 100% premium cotton for ultimate comfort." },
+            { id: 2, name: "Vintage Black Tee", price: 1299, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwWXit2t2E3swuqSHe3rC1-lsnnl4agcEhgA&s", description: "Achieve a retro look with this soft, distressed black T-shirt. Ideal for casual wear." },
+            { id: 3, name: "Graphic Print Tee", price: 1499, image: "https://media.boohooman.com/i/boohooman/bmm18006_black_xl?$product_image_main_mobile$&fmt=webp", description: "Express yourself with our unique graphic print T-shirt. Bold designs and vibrant colors." },
+            { id: 4, name: "Striped Summer Tee", price: 1499, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEz0IiFloLQZjt9dDLTkiHdhIm4uzuXmSedg&s", description: "Light and airy, this striped tee is perfect for summer days. Breathable fabric." },
+            { id: 5, name: "Sporty Performance Tee", price: 1499, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCsicX7SDmqL8F9gT_uRT7yqvMe9DDqzFEcg&s", description: "Designed for active lifestyles, this performance tee wicks away moisture to keep you dry." },
+            { id: 6, name: "Organic Cotton Tee", price: 1599, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9cnsBGx82PfnDrMHD4E8-TtMHyjLySC24mw&s", description: "Eco-friendly and incredibly soft, made from 100% organic cotton. Sustainable fashion choice." },
+            { id: 7, name: "V-Neck Comfort Tee", price: 1599, image: "https://m.media-amazon.com/images/I/71fpXkAEdCL._AC_UY1100_.jpg", description: "A comfortable V-neck tee that's perfect for layering or wearing on its own. Relaxed fit." },
+            { id: 8, name: "Long Sleeve Basic", price: 1799, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ZjhLAC9Yac2K1ND0OX9uzsrF1PgHDfPcyw&s", description: "Versatile long sleeve basic tee for cooler weather. Soft and durable fabric." },
         ];
 
         let cart = []; // Stores { productId, quantity, size }
@@ -446,9 +565,9 @@
                 productCard.className = 'product-card rounded-lg shadow-md p-4 flex flex-col items-center cursor-pointer';
                 productCard.innerHTML = `
                     <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-1">${product.name}</h3>
-                    <p class="text-lime-400 font-bold mb-4">$${product.price.toFixed(2)}</p>
-                    <button class="add-to-cart-btn bg-lime-400 text-black py-2 px-4 rounded-md hover:bg-lime-500 transition duration-300 w-full" data-product-id="${product.id}">Add to Cart</button>
+                    <h3 class="text-lg font-semibold text-white mb-1">${product.name}</h3>
+                    <p class="text-lime-500 font-bold mb-4">₹${product.price.toFixed(2)}</p>
+                    <button class="add-to-cart-btn py-2 px-4 rounded-md hover:bg-lime-600 transition duration-300 w-full" data-product-id="${product.id}">Add to Cart</button>
                 `;
                 productList.appendChild(productCard);
 
@@ -514,9 +633,9 @@
                     cartItemDiv.innerHTML = `
                         <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-md mr-4">
                         <div class="flex-grow">
-                            <h4 class="font-semibold text-gray-800">${item.name} (${item.size})</h4>
-                            <p class="text-sm text-gray-600">Qty: ${item.quantity} x $${item.price.toFixed(2)}</p>
-                            <p class="text-lime-400 font-bold">$${(item.price * item.quantity).toFixed(2)}</p>
+                            <h4 class="font-semibold text-white">${item.name} (${item.size})</h4>
+                            <p class="text-sm text-gray-400">Qty: ${item.quantity} x ₹${item.price.toFixed(2)}</p>
+                            <p class="text-lime-500 font-bold">₹${(item.price * item.quantity).toFixed(2)}</p>
                         </div>
                         <button class="remove-from-cart-btn bg-red-500 text-white p-1 rounded-full text-xs w-6 h-6 flex items-center justify-center hover:bg-red-600 transition duration-300" data-index="${index}">&times;</button>
                     `;
@@ -525,7 +644,7 @@
                 });
             }
 
-            cartTotalSpan.textContent = `$${total.toFixed(2)}`;
+            cartTotalSpan.textContent = `₹${total.toFixed(2)}`;
             cartCountSpan.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
             cartCountMobileSpan.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
 
@@ -557,7 +676,7 @@
                 modalProductImage.alt = currentProductInModal.name;
                 modalProductName.textContent = currentProductInModal.name;
                 modalProductDescription.textContent = currentProductInModal.description;
-                modalProductPrice.textContent = `$${currentProductInModal.price.toFixed(2)}`;
+                modalProductPrice.textContent = `₹${currentProductInModal.price.toFixed(2)}`;
                 modalProductSize.value = 'M'; // Default size
 
                 productDetailsModal.classList.add('open');
@@ -590,10 +709,10 @@
         function setTheme(theme) {
             if (theme === 'light') {
                 body.classList.add('light-mode');
-                themeToggleBtn.textContent = 'Dark';
+                themeToggleBtn.innerHTML = '☀️'; // Sun icon for light mode
             } else {
                 body.classList.remove('light-mode');
-                themeToggleBtn.textContent = 'Light';
+                themeToggleBtn.innerHTML = '🌙'; // Moon icon for dark mode
             }
             localStorage.setItem('theme', theme);
         }
